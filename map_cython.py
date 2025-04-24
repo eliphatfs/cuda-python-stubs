@@ -64,7 +64,7 @@ for stubfile, mod in track(stubfiles.items(), description="Mapping Cython..."):
             modified_stub.append(line)
     if any_mod:
         modified_stub.insert(0, "from typing import *")
-    output_prem = os.path.join("cuda-stubs", os.path.relpath(stubfile, "out"))
+    output_prem = os.path.join("cuda-stubs", os.path.relpath(stubfile, "out/cuda"))
     os.makedirs(os.path.dirname(output_prem), exist_ok=True)
     with open(output_prem, "w") as fo:
         fo.write('\n'.join(modified_stub))
