@@ -1,0 +1,6 @@
+__pyx_capi__: dict
+__test__: dict
+
+class FunctionNotFoundError(RuntimeError): ...
+
+class NotSupportedError(RuntimeError): ...
